@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Mappa Interattiva Instagram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -13,10 +14,22 @@
       body {
         height: 100%;
         margin: 0;
+        touch-action: manipulation;
+        overflow: hidden;
       }
       #mapid {
         height: 100vh;
         width: 100vw;
+      }
+      .leaflet-control-custom {
+        background-color: #6a0dad;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-family: sans-serif;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       }
     </style>
   </head>
@@ -39,120 +52,149 @@
             nome: "Relitto della piattaforma Paguro, Ravenna, Italia",
             latitudine: 44.43294954758269,
             longitudine: 12.547336899952672,
-            url_ig: "https://www.instagram.com/p/esempio1/",
+            url_ig: "https://www.instagram.com/p/DJFnM1kN3TK/?igsh=dHlraWJ5dTdrYm00",
           },
           {
             nome: "EcoArk, Taipei, Taiwan",
             latitudine: 25.070568628934918,
             longitudine: 121.5227370067097,
-            url_ig: "https://www.instagram.com/p/esempio2/",
+            url_ig: "https://www.instagram.com/p/DJFnVhWNff2/?igsh=MTdkcDRqaWJoYTdtbQ==",
           },
           {
             nome: "Eerste plastic fietspad, Zwolle, Paesi Bassi",
             latitudine: 52.50281665081261,
             longitudine: 6.100771499408651,
-            url_ig: "https://www.instagram.com/p/esempio3/",
+            url_ig: "https://www.instagram.com/p/DJFnYs-tV1M/?igsh=MXN4ZnQ2OW1lbXh6Mg==",
           },
           {
             nome: "Growing Underground, Londra",
             latitudine: 51.46639184763294,
             longitudine: -0.12917934709194445,
-            url_ig: "https://www.instagram.com/p/esempio4/",
+            url_ig: "https://www.instagram.com/p/DJFnfHUNKSu/?igsh=N2U0bm9zdm5wdXNz",
           },
           {
             nome: "High Line, New York, Stati Uniti",
             latitudine: 40.748203799990726,
             longitudine: -74.00482927875213,
-            url_ig: "https://www.instagram.com/p/esempio5/",
+            url_ig: "https://www.instagram.com/p/DJFnjQ1tQNh/?igsh=cHkxZzdpM3Y1bzdu",
           },
           {
             nome: "Vennbahn, Dreiländereck BE/LUX/DE",
             latitudine: 50.13000078111503,
             longitudine: 6.138322808082601,
-            url_ig: "https://www.instagram.com/p/esempio6/",
+            url_ig: "https://www.instagram.com/p/DJFnUbMNz3j/?igsh=MXEzYWtkZXQ5bnQybw==",
           },
           {
             nome: "Le Bois du Cazier (ex miniera di carbone), Belgio",
             latitudine: 50.38155434675815,
             longitudine: 4.4440804085270935,
-            url_ig: "https://www.instagram.com/p/esempio7/",
+            url_ig: "https://www.instagram.com/p/DJFnXF7tQ3E/?igsh=NXN0djdyNzBmeDBi",
           },
           {
             nome: "Miniere di Rammelsberg, Germania",
             latitudine: 51.8856566587285,
             longitudine: 10.433160825596449,
-            url_ig: "https://www.instagram.com/p/esempio8/",
+            url_ig: "https://www.instagram.com/p/DJFnanctYRP/?igsh=MW9vOXRneXR6YW84dA==",
           },
           {
             nome: "Salina Turda (ex miniera di sale), Romania",
             latitudine: 46.58811037427848,
             longitudine: 23.7873043704133,
-            url_ig: "https://www.instagram.com/p/esempio9/",
+            url_ig: "https://www.instagram.com/p/DJFnJdNNtHj/?igsh=MWczbnF5cWRrMjRrbg==",
           },
           {
             nome: "Ravenswood Gold, Queensland, Australia",
             latitudine: -20.112883951560114,
             longitudine: 146.89850752819873,
-            url_ig: "https://www.instagram.com/p/esempio10/",
+            url_ig: "https://www.instagram.com/p/DJFndHhtiDU/?igsh=MTUwNncxdHQzM3ExZA==",
           },
           {
             nome: "Strade in plastica riciclata, India",
             latitudine: 12.982880159386749,
             longitudine: 77.6064565764587,
-            url_ig: "https://www.instagram.com/p/esempio11/",
+            url_ig: "https://www.instagram.com/p/DJHeUaDtbjd/?igsh=MTkyc2RlcTdiejcydg==",
           },
           {
             nome: "Artificial Reef, Georgia, Stati Uniti",
             latitudine: 31.63292651329477,
             longitudine: -80.78471154682626,
-            url_ig: "https://www.instagram.com/p/esempio12/",
+            url_ig: "https://www.instagram.com/p/DJFngpKNmhA/?igsh=MWs4OHFpZ2NicXFsMw==",
           },
           {
             nome: "Tetti Verdi, San Paolo, Brasile",
             latitudine: -23.565266771292876,
             longitudine: -46.64504261497228,
-            url_ig: "https://www.instagram.com/p/esempio13/",
+            url_ig: "https://www.instagram.com/p/DJFnKlwNszs/?igsh=azd5NjZ2dWxvY3c5",
           },
           {
             nome: "Gardens by the Bay, Singapore",
             latitudine: 1.2819100476547642,
             longitudine: 103.86513385175255,
-            url_ig: "https://www.instagram.com/p/esempio14/",
+            url_ig: "https://www.instagram.com/p/DJFnLnVNQ6c/?igsh=dWJ0dXY3ZjFpeTRl",
           },
           {
             nome: "Navi sommerse si trasformano in barriere coralline artificiali, Messico",
             latitudine: 25.421687334458962,
             longitudine: -90.80579651777064,
-            url_ig: "https://www.instagram.com/p/esempio15/",
-          },
+            url_ig: "https://www.instagram.com/p/DJFnh9fNZwk/?igsh=MTZwb2F2dmEwZWxlMA==",
+          }
         ];
 
-        var bounds = L.latLngBounds(
+        const bounds = L.latLngBounds(
           luoghi.map((l) => [l.latitudine, l.longitudine])
         );
         map.fitBounds(bounds);
 
-        // ✅ Icona viola
-        const purpleIcon = L.icon({
-          iconUrl:
-            "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png",
-          shadowUrl:
-            "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41],
-        });
-
+        const markers = [];
         luoghi.forEach((luogo) => {
-          var marker = L.marker([luogo.latitudine, luogo.longitudine], {
-            icon: purpleIcon,
+          const marker = L.marker([luogo.latitudine, luogo.longitudine], {
+            icon: new L.Icon({
+              iconUrl:
+                "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png",
+              shadowUrl:
+                "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+              shadowSize: [41, 41],
+            }),
           }).addTo(map);
           marker.bindPopup(
             `<a href="${luogo.url_ig}" target="_blank">${luogo.nome} - Vedi su Instagram</a>`
           );
+          markers.push(marker);
         });
+
+        // Bottone "Torna alla posizione"
+        L.control.custom({
+          position: 'topright',
+          content: '<div class="leaflet-control-custom">Torna alla mappa</div>',
+          classes: '',
+          style: {},
+          events: {
+            click: function () {
+              map.fitBounds(bounds);
+            },
+          },
+        }).addTo(map);
       });
+
+      // Estensione Leaflet Control Custom
+      L.Control.Custom = L.Control.extend({
+        onAdd: function () {
+          var div = L.DomUtil.create('div', 'leaflet-control leaflet-bar');
+          div.innerHTML = this.options.content;
+          div.className += ' ' + (this.options.classes || '');
+          if (this.options.style) Object.assign(div.style, this.options.style);
+          L.DomEvent.on(div, 'click', this.options.events.click);
+          return div;
+        },
+        onRemove: function () {},
+      });
+      L.control.custom = function (options) {
+        return new L.Control.Custom(options);
+      };
     </script>
   </body>
 </html>
+
